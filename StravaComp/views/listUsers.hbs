@@ -1,0 +1,17 @@
+<h2>{{title}}</h2>
+
+
+{{#each users}}
+<div class="card text-bg-primary mb-3" style="max-width: 50rem;">
+    <div class="card-header">{{this.userid}}</div>
+    <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">
+            Username: {{this.userid}} <br>
+            Password: {{this.password}} <br>
+            Role: {{this.role}} <br>
+            Refresh Token: {{this.token}}
+        </p>
+    </div>
+</div>
+{{/each}}

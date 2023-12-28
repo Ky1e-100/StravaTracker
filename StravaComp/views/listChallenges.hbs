@@ -1,0 +1,28 @@
+<h2>{{title}}</h2>
+
+{{#each challenges}}
+
+<div class="card text-bg-primary mb-3" style="max-width: 50rem;">
+    <div class="card-header">{{this.challenge_id}}</div>
+    <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+        <p class="card-text">Challenge Name: {{this.name}} <br>
+            Target Calories: {{this.target_calories}} cal<br>
+            Target Distance: {{this.target_distance}} km <br>
+            Target Elevation: {{this.target_elevation}} m
+        </p>
+    </div>
+</div>
+
+    <div class="card text-bg-secondary mb-3" style="max-width: 50rem;">
+        <div class="card-header">Your Progress</div>
+        <div class="card-body">
+            <h5 class="card-title">Challenge Name: {{this.name}}</h5>
+            <p class="card-text">
+                Your Calories: {{{userCalories}}} cal / {{this.target_calories}} cal<br>
+                Your Distance: {{{userDistance}}} km / {{this.target_distance}} km<br>
+                Your Elevation: {{{userElevation}}} m / {{this.target_elevation}} m
+            </p>
+        </div>
+    </div>
+    {{/each}}

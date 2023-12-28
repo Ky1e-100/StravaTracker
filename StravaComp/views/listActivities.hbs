@@ -1,0 +1,23 @@
+<h2>{{title}}</h2>
+<div>
+    <h1>{{infoText}}</h1>
+
+    {{#each activities}}
+    <div class="card text-bg-primary mb-3" style="max-width: 50rem;">
+        <div class="card-header">Name: {{this.name}}</div>
+        <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text">
+                User: {{this.userid}} <br>
+                Distance: {{this.distance}} km <br>
+                Elevation: {{this.elevation}} m <br>
+                Average Speed: {{this.avgSpeed}} km/h <br>
+                Average Watts: {{this.avgWatts}} W<br>
+                Calories/KJ: {{this.cal}} <br>
+            </p>
+        </div>
+    </div>
+    {{/each}}
+
+
+</div>
